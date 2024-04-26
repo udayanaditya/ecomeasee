@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+    <title>E-Commerce Website</title>
+    <style>
+        body{
+            background-color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        footer {
+            background-color: white;
+            color: rgb(3, 3, 92);
+            text-align: center;
+            padding: 10px 0;
+            bottom: 0;
+            width: 100%;
+            bottom: 0;
+        }
+        #cart {
+            display: none;
+            bottom: 50px;
+            left: 0;
+            width: 100%;
+            color: rgb(3, 3, 92);
+            background-color: #f9f9f9;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            z-index: 1000;
+            text-align: center;
+        }
+        #cart table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #cart th, #cart td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        #cart th {
+            background-color: #f9f9f9;
+        }
+
+        #cart td {
+            text-align: center;
+        }
+
+        #cart button {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            background-color: rgb(3, 3, 92);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #cart button:hover {
+            background-color: #555;
+        }
+        @media only screen and (max-width: 600px) {
+            #cart {
+                bottom: 50px;
+            }
+
+            iframe {
+                height: 150px;
+            }
+
+            iframe[name="iframes"] {
+                height: 1200px;
+            }
+
+            #cart table {
+                font-size: 0.8em;
+            }
+
+            #cart button {
+                padding: 8px 12px;
+                margin-bottom: 8px;
+                font-size:0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <iframe src="wp1.html" 
+    style="height: 194px; width: 100%; border: none;"></iframe>
+    <iframe src="allproducts.html" name="iframes" style="height: 1800px; width: 100%; border: none;"></iframe>
+    <div id="cart">
+        <h2>Cart</h2>
+        <table id="cart-items">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="cart-total">0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+    <footer>
+        <p><strong>&copy; 2024 EcomEase. All rights reserved.</strong></p>
+    </footer>
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(item, price) {
+            let existingItem = cart.find(cartItem => cartItem.item === item);
+            if (existingItem){
+                existingItem.quantity++;
+                existingItem.totalPrice = existingItem.quantity * price;
+            } else {
+                cart.push({ item, price, quantity: 1, totalPrice: price });
+            }
+            total += price;
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            let item = cart[index];
+            if (item.quantity > 1) {
+                item.quantity--;
+                item.totalPrice -= item.price;
+            } else {
+                cart.splice(index, 1);
+            }
+            total -= item.price;
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartItems = document.querySelector('#cart tbody');
+            let cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                let tr = document.createElement('tr');
+                let tdItem = document.createElement('td');
+                tdItem.textContent = item.item;
+                let tdPrice = document.createElement('td');
+                tdPrice.textContent = `Rs ${item.price}`;
+                let tdQuantity = document.createElement('td');
+                tdQuantity.textContent = item.quantity;
+                let tdTotalPrice = document.createElement('td');
+                tdTotalPrice.textContent = `Rs ${item.totalPrice.toFixed(2)}`;
+                let tdRemove = document.createElement('td');
+                let removeButton = document.createElement('button');
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = function() {
+                    removeFromCart(index);
+                };
+                tdRemove.appendChild(removeButton);
+                tr.appendChild(tdItem);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdQuantity);
+                tr.appendChild(tdTotalPrice);
+                tr.appendChild(tdRemove);
+                cartItems.appendChild(tr);
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }   
+
+        function checkout() {
+            alert('Checkout clicked! Total amount: Rs ' + total.toFixed(2));
+            cart = [];
+            total = 0;
+            updateCart();
+        }
+        window.addEventListener('load', function() {
+            document.getElementById('cart').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
