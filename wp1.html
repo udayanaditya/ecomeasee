@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce Website</title>
+    <link rel="stylesheet" href="css/styleee.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-buttons a{
+            text-decoration: none;
+            background-color: rgb(3,3,92);
+            color: white;
+            padding: 7px 15px;
+            margin-right: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        .header-buttons a:hover{
+            background-color: gray;
+        }
+        button {
+            padding: 8px 16px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX///9yy8xPTk5CQUFkx8hrycrJyclIR0dMS0thxsdtystFRESOjo5ra2tWVlatra1eXl6fn5+3t7f3/PyZmZmM09Ti8/Pt+PjS7e2u3+BxcHC24uOG0dLX19dlZGTK6uo6OTmb2Nl8zs/P7OyZ2NnA5uaqqanw8PDh4eHQ0NB7eno2NTW0tLSKiYnr6+vNzc1lHXFBAAALYklEQVR4nO2d6XqbOhCGTSzFBqdZSthqWsCBbE1y7v/uDosRM5KwWQSmefT+hETSoP3zSLNaaTQajUaj0Wg0Go1Go9FoNBrN3LiBEybR2FSiJHQCV0V5VGOHxMqhlj8mFZ/SIhHiqCqWOmzLMirMJ+5NYpDDvlsqmXlMxDJs9WUcR1gbmJvowRcuKd7QTiV2TZaItbRa9InRFC4BL+zjC+vQIRWn+UwGWVhfTEDZDAJeBLR+eL5/2iZIxAqmK+0QDga00JW8oOdL7FKYSjhhcQcAi2ZQV/KiQ534yMIuzXpGQlSHYKhhXYtmZxNxQWde3FAToM8PXkR1qfEIKwcmQjtOMHPhgUEC11ZYFZt0KfAemEiWNiHuWQvj54XUpJSa3WrEYEMyOd+o5yY4mkgP/Mf3sn3UsUJs41iLHb/IvPgHQikZ230CUqRyWNh0X+P5voKSuU9+h0FJo9FoNP8oT4HjJNnIkd7LEicNRmk9U7EvNSSLmumIBaWdkiqVDjuRuQnZotni9Qd/H+y7rQR80qxLF7Z5Wh2gimFCe7J83W1RYnSw0YUqBr3kHt/LO1yA2iLeHsINYsL2h7xW7OcdDj/DiWDZo8hzL/Zxe+9MoB9nJi36Gygd3B3i3WvWbNtNXJBSQEYbEf4zmeCdmGeJW3ZbU7Fo5ZtCiQMLl82w6jdQZETNzqnMsUB1cwbCXb4kz4L6y3baXneHlaDZ6R64sjGlJqOSh2WRa9ObQROpNCXhqTwL0vrLkpVCPFaQpsQmXzZ6VPaRjEqB3M9qvRGcIr4Om3LL8ixgj6nKCbSR/NisYAtfnx47TIosBHNc84LVStZuoSRPnK/S6RN8TzYSjKnDtH60mDrs1Q+jtn7IOh2NhEc11oX6oXQsFT5//ebsWAqKPGAsPSavWpiLqrkJtDlhPmQ5wvkQz9dOMR+SU/MhVEzFPEtcWj5W/iOOt0/Tfcc1TcDWNHzp8jVNgp9xaxo0yYl5VmSpE8wiXKF1KRoOIlrQSR/E69KlLb3B3oKKe4us29LRXfDe4riHKJwMklH7Q7NKxBrt0zEFfpCmQTbyBxU7S9KF7vE1Go1G0w83euo0hX/9frsu+dlG8fLt9aVLnk/d8lRBRoufaa3T6/nXu/dtHK8BOw7wKt69P7+Oz3MAdiTRcuv12Yl11cvzNt5tr3qw3cXbh/aqrPNUvViNSLFmDvEqxWELUJq2/N9jT/OO7P7etNiYns9zmIHVUh8KftgJUe4+eL3eDTCvZBN/yFJEeapc0DGhAW4woYOkJfugn/FQ+wrW75IkUZ4K2ynwo5OYXdku/tePwRV4rMZbcemO8lQoyTTqntk8tM/k9mczzsB8zLnl0+TyVOcN1uhk0JDTFr6PrMGyFn/wqU5Vh0xeQt0NZiY4ud6txxuY98VnLlkkVqp0O01qHzMou0D3QV5p/vqrwsCrq79fON1TeY4jLGQTy2wXxLi//yWbBbdnkP3LLy5hOJaqNDDvivlaIuG0OiZNW4R785ufJzbrON7c3v+p+IE4Pry/3cVrYX0Qv/J5Wi15ToJ3KA/HkAOf2Tsu6G59c/0lTYHj9ed7jIfgzWfXPCfCL37lFtYWL6gKt/FdjxRfbnD9x8KUIM9zXj7gTLG97bIjAuAmvr6epozjQOPMpve8jEwUmukigCWM3/r//wNqA+rLN5pXMNtv/wxJAS4X4p6NfA6uQQHXP4ek8AgG1PVv1eUbz91ubA38ht9ogUMNrIGBvQj05F2fuWYmbhoLhVVXR26b0Xj3oLZ0vfHEtQWwcHMzLFUw32wuaqHrkByHE2mghY/DEv7cDLDQdZUfkAqqZTDvL3czpHiYk0l4vuSgiZ0QQkmoVioOGu8d5Eqg2EKuGdhOoQg7XHV5tNpzmCo3jdCbAG2NJ7XweBbesrCJbN9oKqxF6KmGDm1PamGdK9YvgSecQm0Du2a1FE+1hc0hbxM+BvqNup1xu5o4pYWu3DcRlEWd696FLCRSC6FApa4jth4on7QfEtk3hWq/qW5ShC7dyPNsUgtrvznsv8/OiSv9NQPe7IAE9mnnw+oHRP4MBrtuRKkEFzXjGurd01q42luEWIJLflhdnKKwFxY8kep7csPXxBbmrUfW1aKQmEagemVq70NCQ36hBIp3dXvfyu0JmgQGL96nBFp4Vso/K/Av3sLRaAsvgbawp4UDhZAp0RZqC89YGKWHQ3pZ9/ZJLXSNQpGxaJfTxJMxpYWNOKRSkDnJaUX4arseS4wshFvdWewLCBHvEoKq/ud/12OBvz0hb5M5rlc6SPdqCvYWbUBZYY6L6uT77SktnMrrqw1Tntd0Fk7mudcCUPbQcDNXHU4/1LRol1NamJ7z2lWLPXsrRWeg57i4tf6iNEGPJ7SQeUkKmU5D/TsQ55k4pYWrtD60PX0bLbAdk4pXCSn4DfgET+WVhQf+tPRkeL4vjNnQwil8tjzXvfBlgwp8MRbOA1h5by5dmEkY7xO1dK4X7rM1HuSbKByZ+BYg/9IFuhaO5x787iAe7fkOIB/fzXecMLAv+ub29LHXvthZkoy9kWI0V+i8xTZ+Vzii+sXVc1Tp8cqSlpgvfv44ETP74M51bdfx/efj892HjLtWfkomU1d+i9JYqpgvFn+i2TXazq+IJ9e2mw1/hPss67/iQMy8n5TqUC0xXxp1VnCA4CtxINs1X5S228zG0Rbz5cTZNTRhjEBw1G+UE5VeFy0xX06eBXwZdcq53cJJ6hBJeCC+iAEResWbkjOW4mGL9mYznJaYL+dOOl+rMFG0kN1Ip3C6aIn5cs7C1X/x+L4oOTCTmeVxVqXezi0xX86qs1/3o0dU2ZEgLwhDxVfPtcR8OXunQnGie+SZ9ZkOPbXEfDl/L0bO82a9GdFY5zrW1RLzxemkzr49XsXr3WYzyPtrrt1lW8wXp6M6+/L28fD5nvOr5MdJqr/59V6hdltygpaYL5lVPDYWee9fb1zZUZzWxxqNRqPRXBQ7S4ogNpeWE6cjOIafIZcNv2pHQdAjVJC7D/aSDa2bBQEXTNAzmrWwccGlRv6di4AyYbeW5Bt5tVBKubWfF5aP0RFjG23G6RwtVRrzpb68UQgVVFybLujHTKrE7Y5dlwSvgAzhbejc9fz23gmTGeLMrODljdzOP29ioqwMpEoC0gEaSeMX6OODuejmRH+uODNY9MBOi8eI5PjSSngDG/ggMBwGOyjuoCpEksp8cWb4UB3gBZMKYONFIhAI7IEeB5KHVUrs75v4Fio7p1ydxVGrwQsWChk696KAK02VY/Ur5PMTk58tzsyqb9RqqAGBU/1SBRMLtyjfGePMnKpDFrW6bx06fH5z1aG8HwZt/ZAZY7b2w6Z0w/uhSgP7jqVHyQ4Lc6PG0mZUni/OzAq6gHLzoV3Nh1iYUzUfHuPMKD+hII35wtY0lF/tRIn4U3nUY02DK5E7ep8l6TxxZlZF7PEioIzJ3yHTgmuUV2lb3BBRrEspty4F2rTouDsvT/tee4tMurfwxMf2odlbCHHNvwlF+7D4Pcc3ww8SHX5Go9H0JZ8VkqRjtLJ/Ec8hVfgxxfflLYbIbC6T+5ZTXATDAP5Ls3i+CpYElhbhQl5ip1EvSJOF/oDefSfD7/jQVrrcml1S2W7F7rwbFXQJ6Pp4fDeLst2TpLOiIIQ2bna7bAtML/sTjJTuqpAYp1wSuVpxlAcF9FD2Et7CxrlTGttmKSiuw3nuv+hFd2VP6IeNWMwOiltznGjuSfdfSYSxFNR6fSXFLLFI+lL80mVYpMPHD/lmCt6lJE+EznHqfgB20PHXShevaQhSXosDObLw1P8WeyTfL7DLjWcPNO9vaWDeUA9lr7WIMdslArPj5r324tF/NBqNRqPRaDQajUaj0Wg0Go2G8T8QYdhrjOVIiQAAAABJRU5ErkJggg==" alt="Ecomzy Logo" style="height: 80px;">
+        <h1>EcomEase - Get the best deals on all products</h1>
+        <div class="header-buttons">
+            <a href="http://localhost:8080/login/index1.php" target="_blank">Login</a>
+            <a href="http://localhost:8080/signup/index.php" target="_blank">Sign Up</a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li class="home"><a href="allproducts.html" target="iframes">Home</a></li>
+            <li class="apparel"><a href="apparel.html" target="iframes">Apparel</a></li>
+            <li class="accessories"><a href="accessories.html" target="iframes">Accessories</a></li>
+            <li class="footwear"><a href="footwear.html" target="iframes">Footwear</a></li>
+            <li class="sportswear"><a href="sportswear.html" target="iframes">Sportswear</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
