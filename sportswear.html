@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Products</title>
+<link rel="stylesheet" href="styleap.css">
+</head>
+<body>
+    <img src="https://img.buzzfeed.com/buzzfeed-static/complex/images/Y19jcm9wLGhfNzk0LHdfMjMwOCx4XzMxLHlfMA==/ey2qznp6cctsi91tk9uw/nike-black-friday-2020-banner.png" alt="banner" class="banner">
+<main id="product-list">
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Sports Shoes</h2>
+        <p>Price: Rs 4299.00</p>
+        <button onclick="addToCart('Sports Shoes', 4299.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1611094601537-cdbb75b979cc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHlvZ2ElMjBwYW50c3xlbnwwfDB8MHx8fDA%3D" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Yoga Pants</h2>
+        <p>Price: Rs 1599.00</p>
+        <button onclick="addToCart('Yoga Pants', 1599.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1526888935184-a82d2a4b7e67?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3dlYXRiYW5kc3xlbnwwfDB8MHx8fDA%3D" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Sweatbands</h2>
+        <p>Price: Rs 599.00</p>
+        <button onclick="addToCart('Sweatbands', 599.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1605235185922-7dccaf4ef5ba?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3BvcnRzd2VhcnxlbnwwfDB8MHx8fDA%3D" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Sports Jacket</h2>
+        <p>Price: Rs 1799.00</p>
+        <button onclick="addToCart('Sports Jacket', 1499.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://officemagazine.net/sites/default/files/military_set.jpg" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Track Suit</h2>
+        <p>Price: Rs 5499.00</p>
+        <button onclick="addToCart('Track Suit', 5499.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1605235185711-bf04486a4720?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGN5Y2xpbmclMjBqZXJzZXl8ZW58MHwwfDB8fHww" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Cycling Jersey</h2>
+        <p>Price: Rs 2199.00</p>
+        <button onclick="addToCart('Cycling Jersey', 2199.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://time.com/shopping/static/e3eba4395ca70e510e54e760f880b313/57e17/best-joggers-for-men.jpg" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Joggers</h2>
+        <p>Price: Rs 1899.00</p>
+        <button onclick="addToCart('Joggers', 1899.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1505763146818-69cb84502e20?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFzZWJhbGwlMjBjYXBzfGVufDB8MHwwfHx8MA%3D%3D" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Baseball Cap</h2>
+        <p>Price: Rs 799.00</p>
+        <button onclick="addToCart('Baseball Cap', 799.00)">Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="https://images.unsplash.com/photo-1631287381310-925554130169?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGlraW5nJTIwYm9vdHN8ZW58MHwwfDB8fHww" alt="Product 1" style="height: 250px; width: 100%;">
+        <h2>Hiking Boots</h2>
+        <p>Price: Rs 4999.00</p>
+        <button onclick="addToCart('Hiking Boots', 4999.00)">Add to Cart</button>
+    </div>
+</main>
+<script>
+    function addToCart(item, price) {
+        parent.addToCart(item, price);
+    }
+</script>
+</body>
+</html>
